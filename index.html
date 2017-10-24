@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ocramius' stuff [WIP]</title>
+        <script>
+            (function (document) {
+                "use strict";
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    var mainFrame = document.getElementById("main-frame");
+                    var utcDay    = (new Date()).getUTCDay();
+
+                    if (5 === utcDay) {
+                        mainFrame.src = 'it-is-here.html';
+                        return;
+                    }
+
+                    if (6 === utcDay) {
+                        mainFrame.src = 'it-is-here-too.html';
+                        return;
+                    }
+
+                    mainFrame.src = 'not-today.html';
+                });
+            }(document));
+        </script>
+    </head>
+    <frameset framespacing=0 frameborder=0 rows="100%,*" scrolling=NO noresize><frame src="about:blank" id="main-frame">
+</html>
+
+
